@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # dotfiles_dir=$(pwd)
-dotfiles_dir=$(cd `dirname $0` && pwd)
+# dotfiles_dir=$(cd `dirname $0` && pwd)
+
+ln -sfr nvim ~/.config
+ln -sfr .gitconfig ~/.gitconfig
 
 if [ ! -d ~/bin ]; then
     mkdir ~/bin
@@ -12,5 +15,4 @@ curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimag
 chmod u+x nvim.appimage
 ln -sf nvim.appimage nvim
 ln -sf nvim.appimage vim
-ln -sf $dotfiles_dir/nvim ~/.config
 
