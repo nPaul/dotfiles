@@ -5,6 +5,7 @@
 
 ln -sfr nvim ~/.config
 ln -sfr .gitconfig ~/.gitconfig
+ln -sfr tmux.conf ~/tmux.conf
 
 if [ ! -d ~/bin ]; then
     mkdir ~/bin
